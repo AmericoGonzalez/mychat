@@ -63,7 +63,8 @@ io.on('connection', (socket) => {
     console.log('a user connected');
 });
 
-mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(dbUrl)
+
     .then(() => {
         console.log('Connected to MongoDB');
         var server = http.listen(3000, () => {
