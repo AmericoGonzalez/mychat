@@ -113,18 +113,18 @@
         }
 
         function getMessages() {
-            $.get("/messages", (data) => {
+            $.get("https://chatapp-ct05.onrender.com/messages", (data) => {
                 data.forEach(addMessage);
             });
         }
 
         function postMessage(message) {
-            $.post("/messages", message);
+            $.post("https://chatapp-ct05.onrender.com//messages", message);
         }
 
         $(window).on('beforeunload', () => {
             $.ajax({
-                url: "/messages",
+                url: "https://chatapp-ct05.onrender.com/messages",
                 type: 'DELETE'
             });
         });
